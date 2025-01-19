@@ -1,12 +1,12 @@
 -- CreateTable
 CREATE TABLE "News" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "title" TEXT NOT NULL,
-    "description" TEXT NOT NULL,
-    "content" TEXT NOT NULL,
-    "published" BOOLEAN NOT NULL DEFAULT true,
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "title" TEXT ,
+    "description" TEXT,
+    "content" TEXT,
+    "published" BOOLEAN DEFAULT true,
     "image" TEXT,
     "url" TEXT,
-    "publishedAt" DATETIME NOT NULL,
-    "category" TEXT NOT NULL
+    "publishedAt" DATETIME,
+    "category" TEXT
 );

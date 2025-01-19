@@ -13,7 +13,7 @@ class News {
     }
   }
 
-  static async store(data) {
+  static async tambah(data) {
     try {
       return await prisma.news.create({
         data: {
@@ -32,7 +32,7 @@ class News {
     }
   }
 
-  static async update(id, data) {
+  static async edit(id, data) {
     try {
       return await prisma.news.update({
         where: {
@@ -42,7 +42,7 @@ class News {
           title: data.title,
           description: data.description,
           content: data.content,
-          published: data.published,
+          publishedAt: data.publishedAt,
           image: data.image,
           url: data.url,
           category: data.category,
@@ -53,7 +53,7 @@ class News {
     }
   }
 
-  static async destroy(id) {
+  static async hapus(id) {
     try {
       return await prisma.news.delete({
         where: {
